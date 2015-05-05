@@ -31,10 +31,4 @@ describe('Hello', function () {
             done();
         });
     });
-    it('should render textarea', function (done) {
-        React.renderToStaticMarkup(<textarea id="foo" />, function (err, markup) {
-            assert.equal(markup, '<textarea id="foo"></textarea>');
-            done();
-        });
-    });
 });
