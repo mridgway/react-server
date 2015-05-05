@@ -54,13 +54,13 @@ var ReactServer = {
         }
         return new ReactCompositeElement(type, props, children);
     },
-    renderToStaticMarkup: function (element) {
-        return element.mountComponent(null, {});
+    renderToStaticMarkup: function (element, callback) {
+        callback(null, element.mountComponent(null, {}));
     },
-    renderToString: function (element) {
+    renderToString: function (element, callback) {
         var rootNodeId = ReactInstanceHandles.createReactRootID();
         var markup = element.mountComponent(rootNodeId, {});
-        return ReactMarkupChecksum.addChecksumToMarkup(markup);
+        callback(null, ReactMarkupChecksum.addChecksumToMarkup(markup));
     },
     PropTypes: require('./node_modules/react/lib/ReactPropTypes'),
     createFactory: function (type) {
