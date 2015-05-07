@@ -1,12 +1,12 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './index.js',
+    entry: './node_modules/react/addons.js',
     output: {
         library: "React",
         libraryTarget: "umd",
         path: __dirname + '/dist',
-        filename: 'react-server.js'
+        filename: 'react.js'
     },
     module: {
         loaders: [
