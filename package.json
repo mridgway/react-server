@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack",
+    "lint": "eslint index.js lib/*.js tests/**/*.js",
     "test": "mocha tests/unit/* --compilers js:babel/register"
   },
   "author": "",
@@ -16,7 +17,9 @@
   "devDependencies": {
     "babel": "^5.2.12",
     "babel-core": "^5.2.9",
+    "babel-eslint": "^3.1.1",
     "babel-loader": "^5.0.0",
+    "eslint": "^0.21.0",
     "mocha": "^2.2.4",
     "webpack": "^1.8.11"
   }

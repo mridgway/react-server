@@ -7,4 +7,4 @@ export default React.createClass({
         }
         return <div {...this.props}>Hello world!</div>;
     }
-})
+});

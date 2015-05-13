@@ -9,7 +9,7 @@ class ContextParent extends React.Component {
     getChildContext() {
         return {
             foo: 'bar'
-        }
+        };
     }
 
     render() {
