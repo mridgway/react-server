@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack; webpack --config webpack.react.config.js",
+    "build": "webpack",
     "test": "mocha tests/unit/* --compilers js:babel/register"
   },
   "author": "",
