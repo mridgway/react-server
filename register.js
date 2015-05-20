@@ -1,12 +1,10 @@
-/* global process */
-
 /**
  * This file overrides node's require cache so that require('react') will
  * actually resolve to react-server.
  */
 'use strict';
 
-// Ensure the cache is populated
+// Ensure the cache for react-server is populated
 require('./index');
 
 require.cache[require.resolve('react')] = require.cache[require.resolve('./index')];
