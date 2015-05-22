@@ -1,4 +1,5 @@
 require('babel/register');
+var isDev = process.env.NODE_ENV !== 'production';
 var assert = require('assert');
 var renderAppWithFreshReact = require('../utils/renderAppWithFreshReact');
 var Benchtable = require('benchtable');
@@ -6,7 +7,9 @@ var Benchtable = require('benchtable');
 var appPath = require.resolve('./fixtures/apps/chat');
 var statePath = require.resolve('./fixtures/apps/chat/state.json');
 var reactServerPath = require.resolve('../dist/react-server');
-var reactStockPath = require.resolve('../node_modules/react/dist/react-with-addons');
+var reactStockPath = isDev ?
+    require.resolve('../node_modules/react/dist/react-with-addons') :
+    require.resolve('../node_modules/react/dist/react-with-addons.min');
 
 renderAppWithFreshReact(reactServerPath, appPath, statePath).then(function (serverApp) {
     return renderAppWithFreshReact(reactStockPath, appPath, statePath).then(function (stockApp) {
