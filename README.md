@@ -17,15 +17,14 @@ npm i --save react-server
 react-server is meant to be a drop in replacement for React specifically for the
 server. It should not be used on the client.
 
-In order for this to work without modifying any of the components, you can hack
-node's require cache in the following way:
+You can enable react-server by doing the following:
 
+```js
+require('react-server/register');
 ```
-require('react-server');
 
-require.cache[require.resolve('react')] = require.cache[require.resolve('react-server')];
-require.cache[require.resolve('react/addons')] = require.cache[require.resolve('react-server')];
-```
+Internally this is overriding node's require cache to return react-server
+whenever `require('react')` or `require('react/addons')` is called.
 
 ## Behavioral Differences
 
