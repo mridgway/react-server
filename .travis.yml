@@ -1,5 +1,6 @@
 sudo: false
 language: node_js
+env: NODE_ENV=production
 node_js:
   - "0.10"
   - "0.12"
