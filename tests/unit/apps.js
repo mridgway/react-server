@@ -1,31 +1,5 @@
 var assert = require('assert');
-var mockery = require('mockery');
-var Promise = require('es6-promise').Promise;
-
-function renderAppWithFreshReact(reactPath, appPath, statePath) {
-    return new Promise(function (resolve, reject) {
-        mockery.enable({
-            useCleanCache: true,
-            warnOnUnregistered: false,
-            warnOnReplace: true
-        });
-        var state = require(statePath);
-        var React = require(reactPath);
-        mockery.registerMock('react', React);
-        mockery.registerMock('react/addons', React);
-        var app = require(appPath);
-        app.rehydrate(state).then(function (context) {
-            var markup = React.renderToStaticMarkup(context.createElement());
-            mockery.deregisterAll();
-            mockery.resetCache();
-            mockery.disable();
-            resolve({
-                React: React,
-                markup: markup
-            });
-        }).catch(reject);
-    });
-}
+var renderAppWithFreshReact = require('../../utils/renderAppWithFreshReact');
 
 describe('Apps', function () {
     var apps = {
