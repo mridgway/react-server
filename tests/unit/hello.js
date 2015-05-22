@@ -1,7 +1,7 @@
 var assert = require('assert');
 var React = require('../../index');
-var HelloComponent = require('../fixtures/Hello');
-var HelloCreateClass = require('../fixtures/HelloCreateClass');
+var HelloComponent = require('../fixtures/components/Hello');
+var HelloCreateClass = require('../fixtures/components/HelloCreateClass');
 
 describe('Hello', function () {
     it('should render hello world', function (done) {

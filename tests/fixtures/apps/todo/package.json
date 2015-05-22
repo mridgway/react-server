@@ -1,0 +1,11 @@
+{
+  "name": "flux-example-todo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Example application",
+  "main": "app.js",
+  "author": "Reza Akhavan <jedireza@yahoo-inc.com>",
+  "scripts": {
+    "dev": "grunt todo --gruntfile ../Gruntfile.js --taskName todo"
+  }
+}

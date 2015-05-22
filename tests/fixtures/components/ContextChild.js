@@ -1,4 +1,4 @@
-import React from '../../index';
+import React from '../../../index';
 
 class ContextChild extends React.Component {
     constructor(props, context) {

@@ -1,4 +1,4 @@
-import React from '../../index';
+import React from '../../../index';
 
 class Hello extends React.Component {
     render () {

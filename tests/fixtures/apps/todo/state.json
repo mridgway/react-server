@@ -1,0 +1,1 @@
+{"context":{"dispatcher":{"stores":{"PageStore":{"pageTitle":"showTodos | flux-examples"},"TodoStore":{"todos":[{"id":"td_1432250113392","text":"test"},{"id":"td_1432250114133","text":"test"},{"id":"td_1432250115389","text":"foo"}]}}},"plugins":{"FetchrPlugin":{"xhrContext":{"_csrf":"4wtcxZRX-k_0a5WruM16sFWWpflg1PX2VM7s"},"xhrPath":"/api"}}},"plugins":{}}
