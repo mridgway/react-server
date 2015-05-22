@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "bench": "node tests/bench",
-    "build": "webpack",
+    "build": "NODE_ENV=production webpack",
     "lint": "eslint index.js lib/*.js tests/**/*.js",
-    "test": "npm run build; mocha tests/unit/* --compilers js:babel/register --timeout 15000; npm run bench"
+    "test": "npm run build; mocha tests/unit/* --compilers js:babel/register --timeout 15000; NODE_ENV=production npm run bench"
   },
   "author": "",
   "license": "BSD-3-Clause",
