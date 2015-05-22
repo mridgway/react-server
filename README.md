@@ -52,3 +52,11 @@ react-server chose parent context due to its simpler implementation.
 
 react-server may still be missing functionality from stock React. If you find 
 any missing pieces or broken functionality, please open an issue to let me know.
+
+## Testing
+
+You can run the test suite and benchmarks simply by running:
+
+```
+npm test
+```

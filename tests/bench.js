@@ -19,8 +19,8 @@ renderAppWithFreshReact(reactServerPath, appPath, statePath).then(function (serv
             .addFunction('RenderChat', function(React, context) {
                 React.renderToString(context.createElement());
             })
-            .addInput('Server', [serverApp.React, serverApp.context])
-            .addInput('Stock', [stockApp.React, stockApp.context])
+            .addInput('react-server', [serverApp.React, serverApp.context])
+            .addInput('react', [stockApp.React, stockApp.context])
             // add listeners
             .on('error', function (e) {
                 throw e.target.error;

@@ -4,21 +4,21 @@ var renderAppWithFreshReact = require('../../utils/renderAppWithFreshReact');
 describe('Apps', function () {
     var apps = {
         Chat: {
-            appPath: '../fixtures/apps/chat',
-            statePath: '../fixtures/apps/chat/state.json'
+            appPath: require.resolve('../fixtures/apps/chat'),
+            statePath: require.resolve('../fixtures/apps/chat/state.json')
         },
         FluxibleRouter: {
-            appPath: '../fixtures/apps/fluxible-router',
-            statePath: '../fixtures/apps/fluxible-router/state.json'
+            appPath: require.resolve('../fixtures/apps/fluxible-router'),
+            statePath: require.resolve('../fixtures/apps/fluxible-router/state.json')
         },
         Todo: {
-            appPath: '../fixtures/apps/todo',
-            statePath: '../fixtures/apps/todo/state.json'
+            appPath: require.resolve('../fixtures/apps/todo'),
+            statePath: require.resolve('../fixtures/apps/todo/state.json')
         }
     };
     var ReactPaths = {
-        react: '../../node_modules/react',
-        'react-server': '../../dist/react-server'
+        react: require.resolve('../../node_modules/react'),
+        'react-server': require.resolve('../../dist/react-server')
     };
 
     Object.keys(apps).forEach(function (appName) {
