@@ -5,8 +5,7 @@ module.exports = {
     output: {
         library: "React",
         libraryTarget: "umd",
-        path: __dirname + '/dist',
-        filename: 'react-server.js'
+        path: __dirname + '/dist'
     },
     module: {
         loaders: [
@@ -15,7 +14,7 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+            'process.env.NODE_ENV': JSON.stringify('production')
         })
     ]
 };

@@ -1,5 +1,5 @@
 var assert = require('assert');
-var React = require('../../index');
+var React = require('../../dist/react-server');
 var ContextParent = require('../fixtures/components/ContextParent');
 
 describe('Context', function () {

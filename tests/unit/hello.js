@@ -1,5 +1,5 @@
 var assert = require('assert');
-var React = require('../../index');
+var React = require('../../dist/react-server');
 var HelloComponent = require('../fixtures/components/Hello');
 var HelloCreateClass = require('../fixtures/components/HelloCreateClass');
 

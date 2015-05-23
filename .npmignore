@@ -10,3 +10,4 @@ docs/
 examples/
 screwdriver/
 Makefile
+dist/react.js
