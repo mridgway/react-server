@@ -1,8 +1,8 @@
 var mockery = require('mockery');
-var Promise = require('es6-promise').Promise;
+var PromiseLib = require('es6-promise').Promise;
 
 module.exports = function renderAppWithFreshReact(reactPath, appPath, statePath) {
-    return new Promise(function (resolve, reject) {
+    return new PromiseLib(function (resolve, reject) {
         mockery.enable({
             useCleanCache: true,
             warnOnUnregistered: false,
