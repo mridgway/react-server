@@ -28,7 +28,7 @@ describe('Apps', function () {
         describe(appName, function () {
             it('should render the same output', function (done) {
                 // run in series so mockery doesn't conflict
-                renderAppWithFreshReact(ReactPaths['react'], appPath, statePath).then(function (stockOutput) {
+                renderAppWithFreshReact(ReactPaths.react, appPath, statePath).then(function (stockOutput) {
                     renderAppWithFreshReact(ReactPaths['react-server'], appPath, statePath).then(function (serverOutput) {
                         assert.notEqual(serverOutput.React.__isReactServer, stockOutput.React.__isReactServer);
                         assert.equal(
