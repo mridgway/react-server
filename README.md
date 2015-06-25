@@ -36,17 +36,27 @@ been changed which may bleed in to how components are implemented.
 `React.createClass` automatically binds all non-static methods to the component
 instance so that you do not need to automatically bind them. This is typically 
 used when registering event handlers or passing methods between components. If
-your component does this, you will need to manually bind the method.
+your component relies on this, it's not as simple as just using bind because 
+React on the client will warn about binding methods that are already autobound.
+Instead, you can create a closure:
 
 ```
-<a onClick={this.handleClick.bind(this)}>foo</a>
+React.createClass({
+    render: function () {
+        var self = this;
+        return <a onClick={function (e) {
+            self.handleClick(e);
+        }}>foo</a>
+    }
+});
 ```
 
 ### Owner vs. Parent Context
 
 react-server uses parent context which is slightly different to React 0.13's 
 owner context. React plans on switching to parent context in version 0.14, but
-react-server chose parent context due to its simpler implementation.
+react-server chose parent context due to its simpler implementation. In most
+cases, this is actually more reliable than the old owner context.
 
 ## Missing Utilities
 

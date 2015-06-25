@@ -4,8 +4,11 @@
  */
 'use strict';
 
-// Ensure the cache for react-server is populated
-require('./dist/react-server');
+var requirePath = 'production' === process.env.NODE_ENV ?
+    './dist/react-server' : './dist/react-server.dev.js';
 
-require.cache[require.resolve('react')] = require.cache[require.resolve('./dist/react-server')];
-require.cache[require.resolve('react/addons')] = require.cache[require.resolve('./dist/react-server')];
+// Ensure the cache for react-server is populated
+require(requirePath);
+
+require.cache[require.resolve('react')] = require.cache[require.resolve(requirePath)];
+require.cache[require.resolve('react/addons')] = require.cache[require.resolve(requirePath)];

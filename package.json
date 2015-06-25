@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "bench": "NODE_ENV=production node tests/bench",
-    "build": "webpack --output-file react-server.js",
+    "build": "webpack --output-file react-server.js; NODE_ENV=development webpack --output-file react-server.dev.js",
     "build-min": "webpack -p --output-file react-server.min.js",
     "build-react": " webpack ./node_modules/react/addons.js --output-file=react.js",
     "lint": "eslint index.js lib/*.js tests/**/*.js",
@@ -18,6 +18,9 @@
   "dependencies": {
     "object-assign": "^2.0.0",
     "react": "^0.13.2"
+  },
+  "optionalDependencies": {
+    "profiler": "^1.2.3"
   },
   "devDependencies": {
     "babel": "^5.2.12",
@@ -32,7 +35,6 @@
     "fluxible-router": "^0.1.4",
     "mocha": "^2.2.4",
     "mockery": "^1.4.0",
-    "profiler": "^1.2.3",
     "react-router": "^0.13.3",
     "webpack": "^1.8.11"
   }
