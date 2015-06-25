@@ -23,7 +23,7 @@ var ThreadListItem = React.createClass({
 
     propTypes: {
         thread: ReactPropTypes.object,
-        currentThreadID: ReactPropTypes.string
+        currentThreadID: ReactPropTypes.bool
     },
 
     render: function() {

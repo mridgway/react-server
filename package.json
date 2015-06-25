@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "bench": "NODE_ENV=production node tests/bench",
-    "build": "webpack --output-file react-server.js",
+    "build": "webpack --output-file react-server.js; NODE_ENV=development webpack --output-file react-server.dev.js",
     "build-min": "webpack -p --output-file react-server.min.js",
     "build-react": " webpack ./node_modules/react/addons.js --output-file=react.js",
     "lint": "eslint index.js lib/*.js tests/**/*.js",
