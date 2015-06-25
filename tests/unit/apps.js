@@ -18,7 +18,7 @@ describe('Apps', function () {
     };
     var ReactPaths = {
         react: require.resolve('../../node_modules/react'),
-        'react-server': require.resolve('../../dist/react-server')
+        'react-server': require.resolve('../../dist/react-server.dev')
     };
 
     Object.keys(apps).forEach(function (appName) {

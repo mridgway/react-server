@@ -1,5 +1,5 @@
 var assert = require('assert');
-var React = require('../../dist/react-server');
+var React = require('../../dist/react-server.dev');
 
 describe('Native Components', function () {
     //it('should render button', function (done) {
