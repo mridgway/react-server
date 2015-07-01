@@ -3,7 +3,7 @@ var assign = require('object-assign');
 // Monkey patch setState to be synchronous and not deal with update queue
 var ReactComponent = require('react/lib/ReactComponent');
 ReactComponent.prototype.setState = function (state) {
-    assign(this.state, state);
+    this.state = assign({}, this.state, state);
 };
 
 var ReactServer = require('./lib/React');
