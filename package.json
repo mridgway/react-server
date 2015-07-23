@@ -2,7 +2,7 @@
   "name": "react-server",
   "version": "1.0.3",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/react-server.js",
   "scripts": {
     "bench": "NODE_ENV=production node tests/bench",
     "build": "npm run build-dev; npm run build-prod; npm run build-min",
