@@ -11,6 +11,7 @@
     "build-min": "NODE_ENV=production webpack -p --output-file react-server.min.js",
     "build-react": " webpack ./node_modules/react/addons.js --output-file=react.js",
     "lint": "eslint index.js lib/*.js tests/**/*.js",
+    "prepublish": "npm run build",
     "profile": "node --prof --prof_lazy --log ./tests/profile/react-server.js; node-tick-processor v8.log | grep -v 'unknown code' > artifacts/profile-react-server.txt; rm v8.log",
     "profile-react": "node --prof --prof_lazy --log ./tests/profile/react.js; node-tick-processor v8.log | grep -v 'unknown code' > artifacts/profile-react.txt; rm v8.log",
     "test": "npm run build; npm run build-react; mocha tests/unit/* --compilers js:babel/register --timeout 15000; npm run bench"
