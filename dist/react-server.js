@@ -13878,6 +13878,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Component: _reactLibReactComponent2['default'],
 	    createClass: _ReactClass2['default'].createClass,
 	    createElement: _reactLibReactElement2['default'].createElement,
+	    cloneElement: _reactLibReactElement2['default'].cloneElement,
 	    createFactory: _reactLibReactElement2['default'].createFactory,
 	    DOM: _reactLibReactDOM2['default'],
 	    isValidElement: _reactLibReactElement2['default'].isValidElement,

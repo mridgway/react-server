@@ -22,7 +22,7 @@ var handleHistory = require('fluxible-router').handleHistory;
 
 var ChatApp = React.createClass({
     render: function() {
-        return (
+        return React.cloneElement(
             <div className="chatapp">
                 <ThreadSection />
                 <MessageSection />
