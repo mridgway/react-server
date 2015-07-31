@@ -19,7 +19,7 @@
   "author": "Michael Ridgway <mridgway@yahoo-inc.com>",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "object-assign": "^2.0.0",
+    "object-assign": "^3.0.0",
     "react": "^0.13.2"
   },
   "optionalDependencies": {
