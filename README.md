@@ -8,9 +8,7 @@ rendered markup.
 
 ## Install
 
-```
-npm i --save react-server
-```
+Not available on npm. You must install from git.
 
 ## Usage
 
